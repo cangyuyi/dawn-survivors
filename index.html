@@ -6,6 +6,27 @@
     <title>黎明幸存者</title>
     <script type="module" crossorigin src="./assets/index-BCpCQkXR.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-zmbJjzQ9.css">
+    <!-- Keep the built artifact intact; make difficulty choices fit narrow viewports. -->
+    <style>
+      @media (max-width: 600px) {
+        .diff-select {
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+          padding: 0 12px;
+        }
+        .diff-card {
+          min-width: 0;
+          width: auto;
+          box-sizing: border-box;
+          padding: 10px 6px;
+        }
+        .diff-card .diff-muls { overflow-wrap: anywhere; }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
